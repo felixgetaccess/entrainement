@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trier les livres par titre</title>
+  <script src="script.js"></script>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>Trier les livres par titre</h1>
+  
+  <script>
+    var livres = [
+      { titre: "1984", auteur: "George Orwell", annee: 1949 },
+      { titre: "Le Petit Prince", auteur: "Antoine de Saint-Exupéry", annee: 1943 },
+      { titre: "Guerre et Paix", auteur: "Léon Tolstoï", annee: 1869 }
+    ];
+
+    var livresTries = trierLivresParTitre(livres);
+    console.log("Livres triés par titre : ", livresTries);
+  </script>
+</body>
+</html>
