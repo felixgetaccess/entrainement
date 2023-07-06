@@ -1,13 +1,17 @@
-function estPalindrome(mot) {
-  var motInverse = mot.split("").reverse().join("");
+var nombreAleatoire = Math.floor(Math.random() * 100) + 1;
+var tentative = 0;
 
-  if (mot === motInverse) {
-    console.log(mot + " est un palindrome.");
+function devinerNombre() {
+  var proposition = parseInt(prompt("Devinez le nombre (entre 1 et 100) :"));
+  tentative++;
+
+  if (proposition < nombreAleatoire) {
+    console.log("Trop petit !");
+    devinerNombre();
+  } else if (proposition > nombreAleatoire) {
+    console.log("Trop grand !");
+    devinerNombre();
   } else {
-    console.log(mot + " n'est pas un palindrome.");
+    console.log("Bravo ! Vous avez deviné le nombre en " + tentative + " tentative(s).");
   }
 }
-
-// Exemple d'utilisation
-var mot = "radar";
-estPalindrome(mot);
