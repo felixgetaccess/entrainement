@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vérifier si c'est un palindrome</title>
+  <script src="script.js"></script>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>Vérifier si c'est un palindrome</h1>
+  
+  <script>
+    function verifierPalindrome() {
+      var input = document.getElementById("inputPalindrome").value;
+      var resultat = document.getElementById("resultat");
+
+      if (estPalindrome(input)) {
+        resultat.innerHTML = input + " est un palindrome.";
+      } else {
+        resultat.innerHTML = input + " n'est pas un palindrome.";
+      }
+    }
+  </script>
+
+  <label for="inputPalindrome">Entrez une chaîne de caractères :</label>
+  <input type="text" id="inputPalindrome">
+  <button onclick="verifierPalindrome()">Vérifier</button>
+  <p id="resultat"></p>
+</body>
+</html>
