@@ -1,15 +1,13 @@
-function trouverMotPlusLong(tableauMots) {
-    var motPlusLong = "";
-  
-    for (var i = 0; i < tableauMots.length; i++) {
-      if (tableauMots[i].length > motPlusLong.length) {
-        motPlusLong = tableauMots[i];
-      }
-    }
-  
-    console.log("Le mot le plus long est : " + motPlusLong);
+function estPalindrome(mot) {
+  var motInverse = mot.split("").reverse().join("");
+
+  if (mot === motInverse) {
+    console.log(mot + " est un palindrome.");
+  } else {
+    console.log(mot + " n'est pas un palindrome.");
   }
-  
-  // Exemple d'utilisation
-  var mots = ["chien", "chat", "éléphant", "souris"];
-  trouverMotPlusLong(mots);
+}
+
+// Exemple d'utilisation
+var mot = "radar";
+estPalindrome(mot);
