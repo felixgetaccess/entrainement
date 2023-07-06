@@ -1,7 +1,7 @@
 function calculerAireTriangle() {
-    var base = parseFloat(prompt("Entrez la base du triangle :"));
-    var hauteur = parseFloat(prompt("Entrez la hauteur du triangle :"));
+    var base = parseFloat(document.getElementById("base").value);
+    var hauteur = parseFloat(document.getElementById("hauteur").value);
   
     var aire = (base * hauteur) / 2;
-    console.log("L'aire du triangle est : " + aire);
+    document.getElementById("resultat").textContent = "L'aire du triangle est : " + aire;
   }
